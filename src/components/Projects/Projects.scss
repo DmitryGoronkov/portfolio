@@ -204,6 +204,7 @@
     border:none;
     font-size: 1rem;
     align-self: flex-end;
+    font-weight: bold;
     @media (min-width: 725px) and (max-width: 1359px){
         
         font-size: 2rem;
@@ -282,6 +283,7 @@
             width: 100%;
             color: rgb(110, 72, 0);
             overflow-wrap: break-word;
+            font-weight: bold;
             @media (min-width: 750px) and (max-width: 1023px){
                 font-size: 0.8rem;
             }
@@ -301,6 +303,7 @@ p{
     top: 5vh;
     margin-left: 3rem;
     z-index: 8;
+    
 }
 .buttonProBack{
     width: 100px;
@@ -309,6 +312,7 @@ p{
     background: none;
     color: white;
     border:none;
+    font-weight: bold;
     
     &:hover{
         border: 1px solid white;

@@ -76,6 +76,7 @@ body{
     }
    
     font-size: 1.5rem;
+    font-weight: bold;
     color: rgba(255,255,255,0.95);
     width: 700px;
     height: 100px;
@@ -86,6 +87,7 @@ body{
     color: rgba(255,255,255,0.95);
     width: 700px;
     height: 125px;
+    font-weight: bold;
     word-wrap: break-word;
     @media (min-width: 1440px){
         font-size: 2rem;
@@ -127,6 +129,7 @@ body{
     background: none;
     color: white;
     border:none;
+    font-weight: bold;
     @media (min-width: 320px) and (max-width: 1149px){
         height: 40px;
         font-size: 1.5rem;
