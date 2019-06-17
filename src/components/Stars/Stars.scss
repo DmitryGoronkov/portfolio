@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+.bodystar{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    // background: #eee;
+    top: 5vh;
+    height: 100vh;
+    margin: 0;
+}
+.sky{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    // clip-path: circle(50% at 50% 50%);
+    // border-radius: 50%;
+    transform: rotateZ(45deg);
+}
+.star{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(-45deg, #5f91ff, rgba(0,0,255,0));
+    filter: drop-shadow(0 0 10px #699bff);
+    animation: tail 3000ms ease-in-out infinite;
+}
+.star:nth-child(1){
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    animation-delay: 650ms;
+}
+.star:nth-child(1)::before, .star:nth-child(1)::after{
+    animation-delay: 650ms;
+}
+.star:nth-child(2){
+    top: calc(50% - -50px);
+    left: calc(50% - 190px);
+    animation-delay: 150ms;
+}
+.star:nth-child(2)::before, .star:nth-child(2)::after{
+    animation-delay: 150ms;
+}
+.star:nth-child(3){
+    top: calc(50% - -90px);
+    left: calc(50% - 200px);
+    animation-delay: 300ms;
+}
+.star:nth-child(3)::before, .star:nth-child(3)::after{
+    animation-delay: 300ms;
+}
+.star:nth-child(4){
+    top: calc(50% - 50px);
+    left: calc(50% - 250px);
+    animation-delay: 500ms;
+}
+.star:nth-child(4)::before, .star:nth-child(4)::after{
+    animation-delay: 500ms;
+}
+.star:nth-child(5){
+    top: calc(50% - -190px);
+    left: calc(50% - 200px);
+    animation-delay: 1ms;
+}
+.star:nth-child(5)::before, .star:nth-child(5)::after{
+    animation-delay: 1ms;
+}
+.star:nth-child(6){
+    top: calc(50% - -50px);
+    left: calc(50% - 300px);
+    animation-delay: 1200ms;
+}
+.star:nth-child(6)::before, .star:nth-child(6)::after{
+    animation-delay: 1200ms;
+}
+.star:nth-child(7){
+    top: calc(50% - -90px);
+    left: calc(50% - 450px);
+    animation-delay: 900ms;
+}
+.star:nth-child(7)::before, .star:nth-child(7)::after{
+    animation-delay: 900ms;
+}
+@keyframes tail {
+    0% {
+        width: 0;
+        opacity: 80%
+    }
+    100% { width: 200px; opacity: 0;
+        
+   }
+}
+
+

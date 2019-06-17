@@ -1,0 +1,115 @@
+.main{
+    background-color: rgb(5,5,3);
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+}
+.overlayPr{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+    z-index:2;
+}
+*{
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+}
+.backgroundStars{
+    width: 100vw;
+    height: 100vh;
+}
+.icons{
+    &--wrap{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute !important;
+        top: 5vh;
+        z-index: 3;
+    }
+    
+    width: 500px;
+    height: 125px;
+    display : flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item{
+        display: flex;
+        box-sizing: border-box;
+        border: white 3px solid;
+        padding: 15px;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 25px;
+        // flex: 1 0 21%;
+        object-fit: cover;
+    }
+}
+.headingPr{
+    &--wrap{
+        margin-top: 1rem;
+        width: 700px;
+        height: 225px;
+        
+    }
+   
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    width: 700px;
+    height: 100px;
+}
+.headingP{
+    font-size: 1rem;
+    color: rgba(255,255,255,0.7);
+    width: 700px;
+    height: 125px;
+    word-wrap: break-word;
+}
+.face{
+    &--wrap{
+        width: 100px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: white 3px solid;
+}
+.linkedin{
+    &--wrap{
+        margin-top: 10px;
+        width: 25px;
+        height: 25px;
+
+    }
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+.button{
+    width: 100px;
+    height: 50px;
+    border-radius: 20%;
+    background: none;
+    color: white;
+    border:none;
+    font-size: 1rem;
+    &:hover{
+        border: 1px solid white;
+    }
+    &--link{
+        margin-top: 15px;
+        width: 100px;
+        height: 50px;
+        border-radius: 20%;
+    }}
