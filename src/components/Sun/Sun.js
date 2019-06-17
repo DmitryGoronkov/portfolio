@@ -5,17 +5,12 @@ import posed from 'react-pose'
 const SunAnim = posed.div({
     start: {top: "40vh", transition: { duration: 30000 }},
     finish: {top: "70vh"},
-    
+    // start2: {top: "10vh", left:"80vw", transition: { duration: 30000 }}, 
+    // finish2: {top: "1vh", left:"50vw"}
 })
 export default class Sun extends React.Component {
-    state = {isMoving: false}
-    componentDidMount(){
-        setInterval(()=> {
-            this.setState({ isMoving: true})
-        }, 1000);
-    }
     render() {
-        const {isMoving} = this.state;
+        const {isMoving} = this.props;
         let stylesun = {
             width: "70%",
             height: "70%",

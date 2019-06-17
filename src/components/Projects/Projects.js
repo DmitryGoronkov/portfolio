@@ -4,6 +4,7 @@ import backgr from '../../assets/projectsfinalx.jpg'
 import posed from 'react-pose'
 import Typed from 'react-typed';
 import { Link} from 'react-router-dom';
+import Sun from '../Sun/Sun.js'
 const Icons = posed.div({
     start: {opacity: 0, transition: { duration: 5000}},
     finish: {opacity: 1, transition: { duration: 5000} }

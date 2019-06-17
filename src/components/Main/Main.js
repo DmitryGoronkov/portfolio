@@ -25,11 +25,12 @@ export default class Main extends React.Component{
         light: false,
         isVisible: false,
         light2: false,
-        isClosed: false
+        isClosed: false,
+        isMoving: false
     }
     componentDidMount(){
         setInterval(()=> {
-            this.setState({ light2: true})
+            this.setState({ light2: true, isMoving: true})
         }, 100);
         setInterval(()=> {
             this.setState({ light: true})
@@ -56,7 +57,7 @@ export default class Main extends React.Component{
                 <Overlay2 className="overlay2" pose={light2? 'finish':'start'}></Overlay2>         
                 <Overlay className="overlay" pose={light? 'finish':'start'}></Overlay>
                 <img style={topStyle} src={backTop}></img>
-                <Sun></Sun>
+                <Sun isMoving={this.state.isMoving}></Sun>
                 <img style={bottomStyle} src={backBottom}></img>
                 <div className="heading--wrap">
                     <Typed 

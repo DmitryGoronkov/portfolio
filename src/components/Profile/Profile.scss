@@ -150,6 +150,9 @@ body{
     &:hover{
         border: 1px solid white;
     }
+    &:focus{
+        outline:none;
+    }
     &--link{
         margin-top: 15px;
         width: 100px;
