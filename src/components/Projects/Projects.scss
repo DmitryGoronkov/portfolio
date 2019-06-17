@@ -166,14 +166,13 @@
 	
 }
 .appvideo{
-    position:absolute;
-    top: 15vh;
+    position: relative;
     width: 500px;
     height: 300px;
-    margin-left: 3rem;
     z-index: 8;
     border-radius: 25px;
     border: solid white 5px;
+    box-sizing: border-box;
 }
 .appvideo iframe{
     position: absolute;
@@ -184,3 +183,75 @@
     width: 100%;
     height: 100%;
 }
+.buttonPro{
+    margin-top: 1rem;
+    width: 100px;
+    height: 50px;
+    border-radius: 20%;
+    background: none;
+    color: rgb(110, 72, 0);
+    border:none;
+    font-size: 1rem;
+    align-self: flex-end;
+    &:hover{
+        border: 1px solid rgb(110, 72, 0);
+    }
+    &:focus{
+        outline:none;
+    }
+}
+.beagiver{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    top: 25vh;
+    width: 500px;
+    height: 400px;
+    margin-left: 3rem;
+    z-index: 8;
+    &--description{
+        position:absolute;
+        top: 25vh;
+        left: 50vw;
+        width: 500px;
+        height: 300px;
+        z-index: 8;
+        background-color: rgba(182, 153, 99, 0.5);
+        border-radius: 25px;
+        border: solid white 5px;
+        box-sizing: border-box;
+        padding: 1rem;
+        &__text{
+            width: 100%;
+            color: rgb(110, 72, 0);
+            overflow-wrap: break-word;
+        }
+    }
+}
+p{
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.backPro{
+    position:absolute;
+    top: 5vh;
+    margin-left: 3rem;
+    z-index: 8;
+}
+.buttonProBack{
+    width: 100px;
+    height: 50px;
+    border-radius: 20%;
+    background: none;
+    color: white;
+    border:none;
+    font-size: 1rem;
+    &:hover{
+        border: 1px solid white;
+    }
+    &--link{
+        margin-top: 15px;
+        width: 100px;
+        height: 50px;
+        border-radius: 20%;
+    }}
