@@ -1,6 +1,6 @@
 import React from 'react'
 import './Profile.scss'
-import starsbg from '../../assets/43.jpg'
+import starsbg from '../../assets/profilefinalx.jpg'
 import Stars from '../Stars/Stars'
 import html5 from '../../assets/svg/html5-original-wordmark.svg'
 import css from '../../assets/svg/css3-original-wordmark.svg'
@@ -61,14 +61,14 @@ export default class Profile extends React.Component{
                     <Icons className="headingPr--wrap" pose={isHidden2? 'finish':'start'}>
                     <p className="headingP">I strive to do everything with love and attention. Raised in the family of a programmer, since childhood I developed passion for digital technologies and beautiful designs. Later my commitment to continuous self-growth and passion to make a meaningful difference in people’s lives led me to work in multiple non-profit organizations and even seek a life of a monk. Now as I broadened my skillset with the newest web technologies I am excited for the new opportunities to make a positive difference in people lives through digital realm.</p>
                     <Typed 
-                        strings={['&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Personal motto: "I live to be corrected."']} 
+                        strings={['&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Personal motto: "I live to be corrected."']} 
                         className="headingPr"
                         typeSpeed={200} 
                     /><br /></Icons>
                     <Icons className="face--wrap" pose={isHidden2? 'finish':'start'}>
                         <img className="face" src={face} ></img>
                         <a className="linkedin--wrap" href="https://www.linkedin.com/in/dmitry-goronkov/"><img className="linkedin" src={linkedin}></img></a>
-                        <Link className="button--link" to="/"><button className="button">Back</button></Link>
+                        <Link className="buttonProf--link" to="/"><button className="buttonProf">Back</button></Link>
 
                     </Icons>
                 </div>

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
-
+body{
+    overflow:hidden;
+}
 .main{
     background-color: rgb(5,5,3);
     width: 100vw;
@@ -15,9 +17,9 @@
     z-index:2;
 }
 *{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    // width: 100vw;
+    // height: 100vh;
+    //overflow: hidden;
     font-family: 'Tangerine';
 }
 .backgroundStars{
@@ -38,42 +40,57 @@
     }
     
     width: 500px;
-    height: 125px;
+    height: 100px;
     display : flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (min-width: 1440px){
+        width: 650px;
+        height: 125px;
+        margin-bottom: 2rem;
+    
+    }
     &__item{
         display: flex;
         box-sizing: border-box;
-        border: white 3px solid;
+        border: white 1px solid;
         padding: 15px;
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background-color: rgba(255,255,255,0.5);
         border-radius: 25px;
         // flex: 1 0 21%;
         object-fit: cover;
+        @media (min-width: 1440px){
+            width: 125px;
+            height: 125px;
+            
+        }
     }
 }
 .headingPr{
     &--wrap{
-        margin-top: 1rem;
         width: 700px;
         height: 225px;
         
     }
    
-    font-size: 1rem;
-    color: rgba(255,255,255,0.7);
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.95);
     width: 700px;
     height: 100px;
+    
 }
 .headingP{
-    font-size: 1rem;
-    color: rgba(255,255,255,0.7);
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.95);
     width: 700px;
     height: 125px;
     word-wrap: break-word;
+    @media (min-width: 1440px){
+        font-size: 2rem;
+        height: 200px;
+    }
 }
 .face{
     &--wrap{
@@ -82,6 +99,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (min-width: 1440px){
+            margin-top: 4rem;
+        }
     }
     width: 100px;
     height: 100px;
@@ -100,14 +120,33 @@
     height: 25px;
     object-fit: cover;
 }
-.button{
+.buttonProf{
     width: 100px;
     height: 50px;
     border-radius: 20%;
     background: none;
     color: white;
     border:none;
-    font-size: 1rem;
+    @media (min-width: 320px) and (max-width: 1149px){
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    @media (min-width: 1150px) and (max-width: 1359px){
+        
+        font-size: 1.5rem;
+    }
+    @media (min-width: 320px) and (max-width: 724px){
+        
+        font-size: 1rem;
+    
+    }
+    @media (min-width: 1360px) and (max-width: 1919px) {
+        font-size: 2rem; 
+    }
+    @media (min-width: 1920px){
+        font-size: 3rem;
+    }
     &:hover{
         border: 1px solid white;
     }
@@ -117,3 +156,8 @@
         height: 50px;
         border-radius: 20%;
     }}
+
+    p {
+        margin-block-end: 0.5em !important;
+        margin-block-start: 0.5em !important;
+    }

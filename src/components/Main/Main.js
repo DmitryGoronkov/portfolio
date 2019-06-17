@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
-import backTop from '../../assets/12.jpg';
-import backBottom from '../../assets/21.jpg';
+import backTop from '../../assets/maintopfinalx.jpg';
+import backBottom from '../../assets/mainbottomfinalx.jpg';
 import Sun from '../Sun/Sun.js'
 import posed from 'react-pose'
 import Typed from 'react-typed';

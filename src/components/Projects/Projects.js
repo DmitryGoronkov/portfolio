@@ -1,6 +1,6 @@
 import React from 'react'
 import './Projects.scss'
-import backgr from '../../assets/51.jpg'
+import backgr from '../../assets/projectsfinalx.jpg'
 import posed from 'react-pose'
 import Typed from 'react-typed';
 import { Link} from 'react-router-dom';
