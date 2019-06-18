@@ -7,6 +7,7 @@ import posed from 'react-pose'
 import Typed from 'react-typed';
 import Stars from '../Stars/Stars'
 import { Link} from 'react-router-dom';
+import {RemoveScroll} from 'react-remove-scroll';
 const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.6)"},
     finish: {backgroundColor: "rgba(255, 150, 124, 0.6)",transition: { duration: 10000 }},
@@ -51,6 +52,7 @@ export default class Main extends React.Component{
             height: "20vh",
             zIndex: 2
         }
+        
         let {light, light2, isVisible} = this.state;
         return(
             <div className="main" >   
