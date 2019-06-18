@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Tangerine&display=swap');
-body{
-    // overflow:hidden;
+
+@font-face {
+    font-family:'modern';
+    src: url('../../assets/fonts/Modern.otf') format('opentype');
 }
 
-.main{
+
+.mainprof{
     background-color: rgb(5,5,3);
     width: 100vw;
     height: 100vh;
-
+    text-align: center;
+    display: flex;
+  justify-content: center;
 }
 .overlayPr{
     position: absolute;
@@ -21,7 +24,7 @@ body{
     // width: 100vw;
     // height: 100vh;
     //overflow: hidden;
-    font-family: 'Tangerine';
+    font-family: 'modern';
 }
 .backgroundStars{
     width: 100vw;
@@ -29,7 +32,7 @@ body{
 }
 .icons{
     &--wrap{
-        width: 100%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -37,6 +40,9 @@ body{
         position: absolute !important;
         top: 3rem;
         z-index: 3;
+        border: white 1px solid;
+        background-color: rgba(255,255,255,0.3);
+        border-radius: 25px;
     }
     
     width: 400px;
@@ -53,11 +59,11 @@ body{
     &__item{
         display: flex;
         box-sizing: border-box;
-        border: white 1px solid;
+        // border: white 1px solid;
         padding: 15px;
         width: 80px;
         height: 80px;
-        background-color: rgba(255,255,255,0.5);
+        // background-color: rgba(255,255,255,0.5);
         border-radius: 25px;
         // flex: 1 0 21%;
         object-fit: cover;
@@ -71,11 +77,11 @@ body{
 .headingPr{
     &--wrap{
         width: 700px;
-        height: 225px;
+        height: 200px;
         
     }
    
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: rgba(255,255,255,0.95);
     width: 700px;
@@ -83,26 +89,26 @@ body{
     
 }
 .headingP{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgba(255,255,255,0.95);
     width: 700px;
     height: 125px;
     font-weight: bold;
     word-wrap: break-word;
     @media (min-width: 1440px){
-        font-size: 2rem;
-        height: 200px;
+        font-size: 1.2rem;
+        height: 150px;
     }
 }
 .face{
     &--wrap{
-        width: 100px;
+        width: 150px;
         height: 240px;
         display: flex;
         flex-direction: column;
         align-items: center;
         @media (min-width: 1440px){
-            margin-top: 4rem;
+            margin-top: 2rem;
         }
     }
     width: 100px;
@@ -123,7 +129,7 @@ body{
     object-fit: cover;
 }
 .buttonProf{
-    width: 100px;
+    width: 150px;
     height: 50px;
     border-radius: 20%;
     background: none;
@@ -158,7 +164,7 @@ body{
     }
     &--link{
         margin-top: 15px;
-        width: 100px;
+        width: 150px;
         height: 50px;
         border-radius: 20%;
     }}

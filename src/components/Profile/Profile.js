@@ -10,7 +10,7 @@ import react from '../../assets/svg/react-original-wordmark.svg'
 import express from '../../assets/svg/express-original-wordmark.svg'
 import mongo from '../../assets/svg/mongodb-original-wordmark.svg'
 import nodeicon from '../../assets/svg/nodejs-original-wordmark.svg'
-import posed from 'react-pose'
+import posed, { PoseGroup } from 'react-pose'
 import Typed from 'react-typed';
 import face from '../../assets/face.jpg'
 import linkedin from '../../assets/svg/linkedin-original.svg'
@@ -23,11 +23,28 @@ const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.99)"},
     finish: {backgroundColor: "rgba(0, 0, 0, 0.21)",transition: { duration: 5000 }},
 })
+const Modal = posed.div({
+    enter: {
+      y: 0,
+      opacity: 1,
+      delay: 300,
+      transition: {
+        y: { type: 'spring', stiffness: 1000, damping: 15 },
+        default: { duration: 300 }
+      }
+    },
+    exit: {
+      y: 50,
+      opacity: 0,
+      transition: { duration: 150 }
+    }
+  });
 export default class Profile extends React.Component{
     state = {
         isHidden: false,
         isHidden2: false,
-        light: false
+        light: false,
+        isVisible: false
     }
     componentDidMount(){
         setInterval(()=> {
@@ -35,17 +52,24 @@ export default class Profile extends React.Component{
         }, 5000);
         setInterval(()=> {
             this.setState({ isHidden2: true})
-        }, 10000);
+        }, 7000);
         this.setState({light: true})
+        setInterval(() => {
+            this.setState({
+              isVisible: true
+            });
+          }, 3000);
     }
     render(){
-        const {isHidden,isHidden2, light} = this.state;
+        const {isHidden,isHidden2, light, isVisible} = this.state;
         return(
-            <div className="main">
+            <div className="mainprof">
                 <Overlay className="overlayPr" pose={light? 'finish':'start'}></Overlay>
                 <img src={starsbg} className="backgroundStars"></img>
                 <Stars left="5vw"></Stars>
-                <div className="icons--wrap">
+                <PoseGroup>
+                {isVisible && [
+                <Modal key="modal" className="icons--wrap">
                     <Icons className="icons" pose={isHidden? 'finish':'start'} >
                         <img className="icons__item" src={html5}></img>
                         <img className="icons__item" src={css}></img>
@@ -61,9 +85,9 @@ export default class Profile extends React.Component{
                     <Icons className="headingPr--wrap" pose={isHidden2? 'finish':'start'}>
                     <p className="headingP">I strive to do everything with love and attention. Raised in the family of a programmer, since childhood I developed passion for digital technologies and beautiful designs. Later my commitment to continuous self-growth and passion to make a meaningful difference in people’s lives led me to work in multiple non-profit organizations and even seek a life of a monk. Now as I broadened my skillset with the newest web technologies I am excited for the new opportunities to make a positive difference in people lives through digital realm.</p>
                     <Typed 
-                        strings={['&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Personal motto: "I live to be corrected."']} 
+                        strings={[' &nbsp; &nbsp;Personal motto: "I live to be corrected."']} 
                         className="headingPr"
-                        typeSpeed={200} 
+                        typeSpeed={150} 
                     /><br /></Icons>
                     <Icons className="face--wrap" pose={isHidden2? 'finish':'start'}>
                         <img className="face" src={face} ></img>
@@ -71,8 +95,10 @@ export default class Profile extends React.Component{
                         <Link className="buttonProf--link" to="/"><button className="buttonProf">Back</button></Link>
 
                     </Icons>
-                </div>
-               
+                    
+                </Modal>
+                ]}
+                </PoseGroup>
             </div>
         )
     }
