@@ -104,7 +104,7 @@ export default class Profile extends React.Component{
                         <img className="icons__item" src={mongo}></img>
                         <img className="icons__item" src={nodeicon}></img>
                     </Icons>
-                    <Icons className="headingPr--wrap" pose={isHidden2? 'finish':'start'}>
+                    <Icons className="headingP--wrap" pose={isHidden2? 'finish':'start'}>
                     <p className="headingP">I strive to do everything with love and attention. Raised in the family of a programmer, since childhood I developed passion for digital technologies and beautiful designs. Later my commitment to continuous self-growth and passion to make a meaningful difference in people’s lives led me to work in multiple non-profit organizations and even seek a life of a monk. Now as I broadened my skillset with the newest web technologies I am excited for the new opportunities to make a positive difference in people lives through digital realm.</p>
                     <Typed 
                         strings={[' &nbsp; &nbsp;Personal motto: "I live to be corrected."']} 
