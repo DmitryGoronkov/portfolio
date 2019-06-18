@@ -30,7 +30,27 @@ export default class Main extends React.Component{
         isClosed: false,
         isMoving: false
     }
+    touchStart(e){
+        this.firstClientX = e.touches[0].clientX;
+        this.firstClientY = e.touches[0].clientY;
+    }
+    
+    preventTouch(e){
+        const minValue = 5; // threshold
+    
+        this.clientX = e.touches[0].clientX - this.firstClientX;
+        this.clientY = e.touches[0].clientY - this.firstClientY;
+    
+        // Vertical scrolling does not work when you start swiping horizontally.
+        if(Math.abs(this.clientX) > minValue){ 
+            e.preventDefault();
+            e.returnValue = false;
+            return false;
+        }
+    }
     componentDidMount(){
+        window.addEventListener('touchstart', this.touchStart);
+        window.addEventListener('touchmove', this.preventTouch, {passive: false});
         setInterval(()=> {
             this.setState({ light2: true, isMoving: true})
         }, 100);
@@ -65,7 +85,7 @@ export default class Main extends React.Component{
                 <img style={bottomStyle} src={backBottom}></img>
                 <div className="heading--wrap">
                     <Typed 
-                        strings={['Dmitry Goronkov Front/Back-end Web Developer','If you cannot do great things, do small things in a great way']} 
+                        strings={['Dmirtry Goronkov Front/Back-end Web Developer','If you cannot do great things, do small things in a great way']} 
                         className="heading"
                         typeSpeed={80} 
                         smartBackspace={true}

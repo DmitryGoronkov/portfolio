@@ -15,6 +15,7 @@ import Typed from 'react-typed';
 import face from '../../assets/face.jpg'
 import linkedin from '../../assets/svg/linkedin-original.svg'
 import { Link} from 'react-router-dom';
+import {ScrollLocky} from 'react-scroll-locky';
 const Icons = posed.div({
     start: {opacity: 0, transition: { duration: 5000}},
     finish: {opacity: 1, transition: { duration: 5000} }
@@ -63,6 +64,7 @@ export default class Profile extends React.Component{
     render(){
         const {isHidden,isHidden2, light, isVisible} = this.state;
         return(
+            <ScrollLocky>
             <div className="mainprof">
                 <Overlay className="overlayPr" pose={light? 'finish':'start'}></Overlay>
                 <img src={starsbg} className="backgroundStars"></img>
@@ -100,6 +102,7 @@ export default class Profile extends React.Component{
                 ]}
                 </PoseGroup>
             </div>
+            </ScrollLocky>
         )
     }
 } 
