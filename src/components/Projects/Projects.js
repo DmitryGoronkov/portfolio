@@ -5,6 +5,7 @@ import posed, { PoseGroup }  from 'react-pose'
 import Typed from 'react-typed';
 import { Link} from 'react-router-dom';
 import Sun from '../Sun/Sun.js'
+import {ScrollLocky} from 'react-scroll-locky';
 const Icons = posed.div({
     start: {opacity: 0, transition: { duration: 5000}},
     finish: {opacity: 1, transition: { duration: 5000} }
@@ -53,6 +54,7 @@ export default class Projects extends React.Component{
     render(){
         const {isHidden,isHidden2, light,isVisible } = this.state;
         return(
+            <ScrollLocky>
             <div className="main">
                 <Overlay className="overlayPr" pose={light? 'finish':'start'}></Overlay>
                 <img src={backgr} className="backgroundlight"></img>
@@ -89,7 +91,9 @@ export default class Projects extends React.Component{
                 </Modal>
                 ]}
                 </PoseGroup>
+                
             </div>
+            </ScrollLocky>
         )
     }
 } 
