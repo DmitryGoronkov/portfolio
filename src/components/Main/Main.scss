@@ -46,6 +46,10 @@ body{
         width: 450px;
         font-size: 5rem;
     }
+    @media (min-width: 320px) and (max-width: 600px){
+        font-size: 2.5rem;
+        width: 90%
+    }
     width: 450px;
     word-wrap: break-word;
     text-align: center;
@@ -110,6 +114,11 @@ body{
                 width: 100%;
                 
             }
+            @media (min-width: 320px) and (max-width: 600px){
+                width: 80%;
+                height: 60px;
+                height: 60px;
+            }
 
         }
         display: flex;
@@ -120,6 +129,11 @@ body{
         @media (max-width: 724px){
             width: 100%;
             
+        }
+        @media (min-width: 320px) and (max-width: 600px){
+            width: 80%;
+            height: 60px;
+            justify-content: space-between;
         }
     }
 }
