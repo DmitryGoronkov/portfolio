@@ -85,7 +85,7 @@ export default class Main extends React.Component{
                 <img style={bottomStyle} src={backBottom}></img>
                 <div className="heading--wrap">
                     <Typed 
-                        strings={['Dmirtry Goronkov Front/Back-end Web Developer','If you cannot do great things, do small things in a great way']} 
+                        strings={['Dmitry Goronkov Front/Back-end Web Developer','If you cannot do great things, do small things in a great way']} 
                         className="heading"
                         typeSpeed={80} 
                         smartBackspace={true}
