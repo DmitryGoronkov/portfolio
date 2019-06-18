@@ -203,13 +203,17 @@
     position:absolute;
     display: flex;
     flex-direction: column;
-    
+    @media (max-width: 450px){
+       top:1vh;
+       height: 50%;
+       width: 85%;
+    }
     top: 15vh;
     width: 500px;
     height: 400px;
     margin-left: 3rem;
     z-index: 8;
-    @media(max-width:750px){
+    @media(min-width: 450px) and (max-width:750px){
         width:40%;
         height:40%;
     }
@@ -295,7 +299,9 @@ p{
     top: 5vh;
     margin-left: 3rem;
     z-index: 8;
-    
+    @media (max-width: 450px){
+        top: -6vh;
+    }
 }
 .buttonProBack{
     width: 150px;
