@@ -8,6 +8,7 @@ import Typed from 'react-typed';
 import Stars from '../Stars/Stars'
 import { Link} from 'react-router-dom';
 import {RemoveScroll} from 'react-remove-scroll';
+import {ScrollLocky} from 'react-scroll-locky';
 const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.6)"},
     finish: {backgroundColor: "rgba(255, 150, 124, 0.6)",transition: { duration: 10000 }},
@@ -55,6 +56,7 @@ export default class Main extends React.Component{
         
         let {light, light2, isVisible} = this.state;
         return(
+            <ScrollLocky>
             <div className="main" >   
                 <Overlay2 className="overlay2" pose={light2? 'finish':'start'}></Overlay2>         
                 <Overlay className="overlay" pose={light? 'finish':'start'}></Overlay>
@@ -76,6 +78,7 @@ export default class Main extends React.Component{
                     </Buttons>
                 </div>
             </div>
+            </ScrollLocky>
         )
     }
 }
