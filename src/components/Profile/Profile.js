@@ -84,7 +84,7 @@ export default class Profile extends React.Component{
     render(){
         const {isHidden,isHidden2, light, isVisible} = this.state;
         return(
-            <ScrollLocky>
+            <ScrollLocky className="locky">
             <div className="mainprof">
                 <Overlay className="overlayPr" pose={light? 'finish':'start'}></Overlay>
                 <img src={starsbg} className="backgroundStars"></img>

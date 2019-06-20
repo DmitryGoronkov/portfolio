@@ -7,6 +7,9 @@ import Profile from './components/Profile/Profile'
 import Projects from './components/Projects/Projects'
 
 class App extends React.Component {
+  componentDidMount(){
+    document.title = "Dmitry Goronkov Portfolio"
+  }
   render(){
   return (
     <div>

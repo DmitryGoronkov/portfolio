@@ -100,7 +100,7 @@ export default class Projects extends React.Component{
                 </Icons> 
                 <Icons className="beagiver" pose={this.state.isHidden? "finish":"start"}>
                     <div className="appvideo" >
-                        <iframe width="320" height="480" src="https://www.youtube.com/embed/IeIJ3_X8GBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        <iframe width="320" height="480" src="https://www.youtube.com/embed/IeIJ3_X8GBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" ></iframe>
                     </div>
                 </Icons>
                 <Icons className="beagiver--description" pose={this.state.isHidden2? "finish":"start"}>
