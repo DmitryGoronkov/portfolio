@@ -91,12 +91,10 @@ export default class Main extends React.Component{
                         smartBackspace={true}
                     /><br />
                 </div>
-                <div className="button--wrap--flex">
                     <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
                         <Link className="button--link" to="/projects"><button className="button">Projects</button></Link>
                         <Link className="button--link" to="/profile"><button className="button">Profile</button></Link>
                     </Buttons>
-                </div>
             </div>
             </ScrollLocky>
         )
