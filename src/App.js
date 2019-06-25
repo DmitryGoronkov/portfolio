@@ -5,11 +5,17 @@ import posed, { PoseGroup } from 'react-pose';
 import Main from './components/Main/Main'
 import Profile from './components/Profile/Profile'
 import Projects from './components/Projects/Projects'
-
+import ReactGA from 'react-ga';
+function initializeReactGA() {
+  ReactGA.initialize('UA-142705554-1');
+  ReactGA.pageview('/homepage');
+}
 class App extends React.Component {
   componentDidMount(){
     document.title = "Dmitry Goronkov Portfolio"
+    initializeReactGA();
   }
+  
   render(){
   return (
     <div>
