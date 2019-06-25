@@ -25,6 +25,9 @@
 	will-change: background-position;
     position: absolute;
     top: 20vh;
+    @media (max-width: 500px){
+        top: 70vh;
+    }
 	animation-name: fly;
 	
 	animation-timing-function: steps(10);
@@ -223,7 +226,11 @@
     height: 400px;
     margin-left: 3rem;
     z-index: 8;
-    @media(min-width: 450px) and (max-width:750px){
+    @media (max-width: 549px){
+        width:300px;
+        height:320px; 
+    }
+    @media(min-width: 550px) and (max-width:750px){
         width:40%;
         height:40%;
     }
@@ -248,7 +255,7 @@
         width: 500px;
         height: 400px;
         @media (max-width: 450px){
-            top: 50vh;
+            top: 320px;
             left: 0;
             // margin-left: 3rem;
             margin: 0 auto;
