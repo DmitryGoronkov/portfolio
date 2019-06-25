@@ -89,9 +89,9 @@ body{
     }
     &:hover{
         border: 1px solid white;
-        // @media(min-width: 300px) and (max-width: 500px){
-        //     border: none;
-        //  }
+        @media(min-width: 300px) and (max-width: 500px){
+            border: none;
+         }
 
     }
     &:focus{
@@ -127,7 +127,7 @@ body{
         display: flex;
         position: absolute;
         top: 70vh;
-        width: 100vw;
+        width: 99vw;
         height: 60px;
         justify-content: space-around;
         align-items: baseline;
