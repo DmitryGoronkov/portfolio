@@ -169,7 +169,15 @@
     border-radius: 25px;
     border: solid white 10px;
     box-sizing: border-box;
-    @media(min-width: 450px) and (max-width:750px){
+    @media (max-width: 549px){
+        width:300px;
+        height:300px;
+    }
+    @media(min-width: 550px) and (max-width:750px){
+        width:300px;
+        height:300px;
+    }
+    @media(min-width: 550px) and (max-width:750px){
         width:40%;
         height:40%;
     }
@@ -241,8 +249,8 @@
             top: 50vh;
             left: 0;
             margin-left: 3rem;
-            height: 50%;
-            width: 85%;
+            width:300px;
+            height:300px;
         }
         @media(min-width: 451px) and (max-width:750px){
             width:40%;
@@ -340,7 +348,7 @@ p{
         border-radius: 20%;
     }}
 .modal{
-    width: 100%;
+    width: 99vw;
     box-sizing: border-box;
     height: 80%;
         position: absolute !important;
@@ -353,7 +361,7 @@ p{
             height:90%
     
         }
-        @media (max-width: 450px){
+        @media (max-width: 500px){
             display:flex;
             flex-direction: column;
             height: 95%;
