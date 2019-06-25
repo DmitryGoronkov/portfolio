@@ -58,7 +58,7 @@ export default class Main extends React.Component{
             this.setState({ light: true})
         }, 5000);
         setInterval(()=>{
-            this.setState({isVisible: true})}, 9000)
+            this.setState({isVisible: true})}, 3000)
         
     }
     render(){

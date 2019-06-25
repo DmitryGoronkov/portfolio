@@ -92,6 +92,7 @@ export default class Profile extends React.Component{
                 <PoseGroup>
                 {isVisible && [
                 <Modal key="modal" className="icons--wrap">
+                    <Link className="buttonProf--link" to="/"><button className="buttonProf">Back</button></Link>
                     <Icons className="icons" pose={isHidden? 'finish':'start'} >
                         <img className="icons__item" src={html5}></img>
                         <img className="icons__item" src={css}></img>
@@ -114,7 +115,7 @@ export default class Profile extends React.Component{
                     <Icons className="face--wrap" pose={isHidden2? 'finish':'start'}>
                         <img className="face" src={face} ></img>
                         <a className="linkedin--wrap" href="https://www.linkedin.com/in/dmitry-goronkov/"><img className="linkedin" src={linkedin}></img></a>
-                        <Link className="buttonProf--link" to="/"><button className="buttonProf">Back</button></Link>
+                        
 
                     </Icons>
                     
