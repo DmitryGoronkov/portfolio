@@ -44,19 +44,12 @@
         border: white 1px solid;
         background-color: rgba(255,255,255,0.3);
         border-radius: 25px;
-        @media (max-width: 1023px){
-            width: 100%;
-        }
-        @media (min-width: 320px) and (max-width:1022px){
-            width: 100%;
-        
-        }
     }
     
     width: 400px;
     height: 90px;
-    @media(min-width: 350px) and (max-width: 400px){
-        width: 345px;
+    @media(min-width: 300px) and (max-width: 500px){
+        width: 250px;
     }
     display : flex;
     justify-content: space-between;
@@ -74,6 +67,11 @@
         padding: 15px;
         width: 80px;
         height: 80px;
+        @media(min-width: 300px) and (max-width: 500px){
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+        }
         // background-color: rgba(255,255,255,0.5);
         border-radius: 25px;
         // flex: 1 0 21%;
@@ -204,6 +202,9 @@
         position: absolute;
         top: 5vh;
         right: 80vw;
+        @media(max-width: 500px){
+            right: 70vw;
+        }
         width: 150px;
         height: 50px;
         border-radius: 20%;
