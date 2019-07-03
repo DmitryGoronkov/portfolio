@@ -35,7 +35,8 @@ export default class Projects extends React.Component{
         isHidden: false,
         isHidden2: false,
         light: false,
-        isVisible: false 
+        isVisible: false,
+        imageStatus: false
     }
     touchStart(e){
         this.firstClientX = e.touches[0].clientX;
@@ -55,21 +56,27 @@ export default class Projects extends React.Component{
             return false;
         }
     }
-    componentDidMount(){
-        window.addEventListener('touchstart', this.touchStart);
-        window.addEventListener('touchmove', this.preventTouch, {passive: false});
-        setInterval(()=> {
-            this.setState({ isHidden: true})
-        }, 5000);
-        setInterval(()=> {
-            this.setState({ isHidden2: true})
-        }, 6000);
-        this.setState({light: true})
-        setInterval(() => {
-            this.setState({
-              isVisible: true
-            });
-          }, 4000);
+    handleImageLoaded() {
+        this.setState({ imageStatus: true });
+    }
+    componentDidUpdate(){
+        if (this.state.imageStatus){
+            window.addEventListener('touchstart', this.touchStart);
+            window.addEventListener('touchmove', this.preventTouch, {passive: false});
+            setInterval(()=> {
+                this.setState({ isHidden: true})
+            }, 5000);
+            setInterval(()=> {
+                this.setState({ isHidden2: true})
+            }, 6000);
+            this.setState({light: true})
+            setInterval(() => {
+                this.setState({
+                isVisible: true
+                });
+            }, 4000);
+            this.setState({imageStatus:false})
+        }
     }
     render(){
         const {isHidden,isHidden2, light,isVisible } = this.state;
@@ -77,7 +84,7 @@ export default class Projects extends React.Component{
             <ScrollLocky>
             <div className="main">
                 <Overlay className="overlayPr" pose={light? 'finish':'start'}></Overlay>
-                <img src={backgr} className="backgroundlight"></img>
+                <img src={backgr} onLoad={this.handleImageLoaded.bind(this)} className="backgroundlight"></img>
                 <div class="bird--wrap bird--wrap--one">
 		            <div class="bird bird--one"></div>
 	            </div>
