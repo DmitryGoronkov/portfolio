@@ -28,7 +28,15 @@ export default class Main extends React.Component{
         isVisible: false,
         light2: false,
         isClosed: false,
-        isMoving: false
+        isMoving: false,
+        imageStatus1: false,
+        imageStatus2: false
+    }
+    handleImageLoaded1() {
+        this.setState({ imageStatus1: true });
+    }
+    handleImageLoaded2() {
+        this.setState({ imageStatus2: true });
     }
     touchStart(e){
         this.firstClientX = e.touches[0].clientX;
@@ -48,18 +56,21 @@ export default class Main extends React.Component{
             return false;
         }
     }
-    componentDidMount(){
-        window.addEventListener('touchstart', this.touchStart);
-        window.addEventListener('touchmove', this.preventTouch, {passive: false});
-        setInterval(()=> {
-            this.setState({ light2: true, isMoving: true})
-        }, 100);
-        setInterval(()=> {
-            this.setState({ light: true})
-        }, 5000);
-        setInterval(()=>{
-            this.setState({isVisible: true})}, 3000)
-        
+    componentDidUpdate(){
+        if (this.state.imageStatus1 && this.state.imageStatus2){
+            window.addEventListener('touchstart', this.touchStart);
+            window.addEventListener('touchmove', this.preventTouch, {passive: false});
+            setInterval(()=> {
+                this.setState({ light2: true, isMoving: true})
+            }, 100);
+            setInterval(()=> {
+                this.setState({ light: true})
+            }, 5000);
+            setInterval(()=>{
+                this.setState({isVisible: true})}, 3000)
+            this.setState({imageStatus1:false})
+        }
+
     }
     render(){
         let topStyle={
@@ -80,9 +91,9 @@ export default class Main extends React.Component{
             <div className="main" >   
                 <Overlay2 className="overlay2" pose={light2? 'finish':'start'}></Overlay2>         
                 <Overlay className="overlay" pose={light? 'finish':'start'}></Overlay>
-                <img style={topStyle} src={backTop}></img>
+                <img onLoad={this.handleImageLoaded1.bind(this)} style={topStyle} src={backTop}></img>
                 <Sun isMoving={this.state.isMoving}></Sun>
-                <img style={bottomStyle} src={backBottom}></img>
+                <img onLoad={this.handleImageLoaded2.bind(this)} style={bottomStyle} src={backBottom}></img>
                 <div className="heading--wrap">
                     <Typed 
                         strings={['Dmitry Goronkov Front/Back-end Web Developer','If you cannot do great things, do small things in a great way']} 
