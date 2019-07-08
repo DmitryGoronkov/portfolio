@@ -7,6 +7,8 @@ import posed from 'react-pose'
 import Typed from 'react-typed';
 import Stars from '../Stars/Stars'
 import { Link} from 'react-router-dom';
+import down from '../../assets/svg/arrowdown.svg'
+
 const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.6)"},
     finish: {backgroundColor: "rgba(255, 150, 124, 0.6)",transition: { duration: 10000 }},
@@ -117,10 +119,9 @@ export default class Main extends React.Component{
 	            <div class="bird--wrap bird--wrap--four">
 		            <div class="bird bird--four"></div>
 	            </div>
-                    {/* <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
-                        <a className="button--link" to="/projects"><button className="button">Projects</button></a>
-                        <a className="button--link" to="/profile"><button className="button">Profile</button></a>
-                    </Buttons> */}
+                    <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
+                        <img className="arrow" src={down} alt="down arrow"/>
+                    </Buttons>
             </div>
             // </ScrollLocky>
         )

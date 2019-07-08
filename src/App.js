@@ -15,6 +15,8 @@ import linkedin from './assets/svg/linkedin-logo.svg'
 import curly from './assets/svg/curly-hair.svg'
 import wordpress from './assets/svg/wordpress.svg'
 import mockup from './assets/mockup.png'
+import Popup from "reactjs-popup";
+
 function initializeReactGA() {
   ReactGA.initialize('UA-142705554-1');
   ReactGA.pageview('/homepage');
@@ -58,7 +60,7 @@ class App extends React.Component {
           <div className="projects__intro">
             <img className="projects__intro__logo" src={curly} alt="logo"/>
             <div className="projects__intro__greeting">
-              <span>Hi! My name is Dmitry Goronkov. I am a web developer from Toronto, Canada. I am also an author of the blog <span className="bold"><a href="https://webdevsnippets.home.blog/">Web Development Snippets. </a></span> My personal motto: "I live to be corrected."</span>
+              <span>Hi! My name is Dmitry Goronkov. I am a Full Stack Web Developer from Toronto, Canada. I am also an author of the blog <span className="bold"><a href="https://webdevsnippets.home.blog/">Web Development Snippets. </a></span> My personal motto: "I live to be corrected."</span>
               <div className="projects__intro__greeting__links">
                 <a href="https://www.linkedin.com/in/dmitry-goronkov/"><img src={linkedin} alt="linkedin"/></a>
                 <a href="https://github.com/DmitryGoronkov"><img src={github} alt="github"/></a>
@@ -67,13 +69,21 @@ class App extends React.Component {
             </div> 
             <div className="projects__intro__details">Raised in the family of a programmer, since childhood I developed passion for digital technologies and beautiful designs. Later my commitment to continuous self-growth and passion to make a meaningful difference in people’s lives led me to work in multiple non-profit organizations and even seek a life of a monk. Now as I broadened my skillset with the newest web technologies I am excited for the new opportunities to make a positive difference in people lives through digital realm. </div>
           </div>
-        </div>
-        <div className="demo">
+          <div className="demo">
           <div className="demo__title">My Projects</div>
           <div className="demo__beagiver">
             <img src={mockup} alt="beagivermockup"/>
-            <div className="demo__beagiver__description"> <span style={{fontWeight:"bold"}}>BeAGiver</span> is a mobile app with the goal to reduce food waste. Over <span style={{fontWeight:"bold"}}> $31 billion </span> dollars worth of food is wasted in Canada each year. This is enough to feed  <span style={{fontWeight:"bold"}}>every Canadian for five month. </span> The app connects charity organizations with grocery stores and restaurants and helps organize pick up of their extra food for further distribution to homeless and people in need.<div style={{fontWeight:"bold", marginTop:"1rem"}}>Technologies used: <span>React</span>,<span>Express</span>,<span>MongoDB</span>,<span>Google API</span></div></div>
+            <div className="demo__beagiver__description"> <span style={{fontWeight:"bold"}}>BeAGiver</span> is a mobile app with the goal to reduce food waste. Over <span style={{fontWeight:"bold"}}> $31 billion </span> dollars worth of food is wasted in Canada each year. This is enough to feed  <span style={{fontWeight:"bold"}}>every Canadian for five month. </span> The app connects charity organizations with grocery stores and restaurants and helps organize pick up of their extra food for further distribution to homeless and people in need.
+              <div style={{fontWeight:"bold", marginTop:"1rem"}}>Technologies used: <span>React</span>, <span>Express</span>, <span>MongoDB</span>, <span>Google API</span></div>
+              <Popup trigger={<button> Demo </button>} 
+                      modal
+                      closeOnDocumentClick
+                      position="center center">
+                      <iframe title="beagiver" src="https://www.youtube.com/embed/IeIJ3_X8GBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" ></iframe>
+              </Popup>
+            </div>
           </div>
+        </div>
         </div>
     </div>
   );
