@@ -7,7 +7,7 @@ a{
   
   box-sizing: border-box;
   width: 100%;
-  height: 90vh;
+  
   background-color: white;
   z-index: 100;
   position: absolute;
@@ -100,7 +100,7 @@ a{
     &__greeting{
       width: 40%;
       display: flex;
-      
+      flex-direction: column;
       @media (min-width: 301px) and (max-width: 500px){
         width: 80vw;
         margin-top: 2rem;
@@ -117,9 +117,6 @@ a{
         color: rgb(241, 142, 50);
       font-size: 1.6rem;
       font-weight: 900;
-      @media (min-width: 301px) and (max-width: 500px){
-        
-      }
       @media (min-width: 801px) and (max-width: 1023px){
         font-size: 1.2rem;
       }
@@ -162,8 +159,7 @@ a{
   }
 }
 .demo{
-  height: 100vh;
-  width: 100vw;
+  // width: 100vw;
   @media (min-width: 301px) and (max-width: 500px){
     width: 100%;
     margin-top: 2rem;
@@ -175,7 +171,7 @@ a{
   &__title{
     padding-top: 1rem;
     font-size: 2.5rem;
-    padding-left: 3rem;
+    padding-left: 1rem;
     font-weight: bold;
     @media (min-width: 301px) and (max-width: 500px){
       padding-left: 0;
