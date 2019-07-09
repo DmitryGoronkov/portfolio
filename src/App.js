@@ -5,7 +5,7 @@ import posed, { PoseGroup } from 'react-pose';
 import Main from './components/Main/Main'
 import ReactGA from 'react-ga';
 import technology from './assets/svg/innovation.svg'
-import colaboration from './assets/svg/hands.svg'
+import colaboration from './assets/svg/team.svg'
 import ps from './assets/svg/problem-solving.svg'
 import love from './assets/svg/care.svg'
 import github from './assets/svg/github-logo.svg'

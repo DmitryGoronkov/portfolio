@@ -135,7 +135,7 @@ body{
     position: absolute;
     top: 20vh;
     @media (max-width: 500px){
-        top: 70vh;
+        top: 40vh;
     }
 	animation-name: fly;
 	
@@ -233,45 +233,48 @@ body{
 	}
 	
 	100% {
-		transform: translateY(0vh) translateX(100vw) scale(0.6);
+        transform: translateY(0vh) translateX(100vw) scale(0.6);
+        @media (max-width: 800px){
+            transform: translateY(0vh) translateX(90vw) scale(0.6);
+        }
 	}
 	
 }
-@keyframes fly-right-two {
+// @keyframes fly-right-two {
 	
-	0% {
-		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
-	}
+// 	0% {
+// 		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+// 	}
 	
-	10% {
-		transform: translateY(0vh) translateX(10vw) scale(0.4);
-	}
+// 	10% {
+// 		transform: translateY(0vh) translateX(10vw) scale(0.4);
+// 	}
 	
-	20% {
-		transform: translateY(-4vh) translateX(30vw) scale(0.6);
-	}
+// 	20% {
+// 		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+// 	}
 	
-	30% {
-		transform: translateY(1vh) translateX(50vw) scale(0.45);
-	}
+// 	30% {
+// 		transform: translateY(1vh) translateX(50vw) scale(0.45);
+// 	}
 	
-	40% {
-		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
-	}
+// 	40% {
+// 		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+// 	}
 	
-	50% {
-		transform: translateY(0vh) translateX(90vw) scale(0.45);
-	}
+// 	50% {
+// 		transform: translateY(0vh) translateX(90vw) scale(0.45);
+// 	}
 	
-	51% {
-		transform: translateY(0vh) translateX(100vw) scale(0.45);
-	}
+// 	51% {
+// 		transform: translateY(0vh) translateX(100vw) scale(0.45);
+// 	}
 	
-	100% {
-		transform: translateY(0vh) translateX(100vw) scale(0.45);
-	}
+// 	100% {
+// 		transform: translateY(0vh) translateX(100vw) scale(0.45);
+// 	}
 	
-}
+// }
 .arrow{
     width: 3rem;
     height: 3rem;
