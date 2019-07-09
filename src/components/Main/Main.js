@@ -6,8 +6,8 @@ import Sun from '../Sun/Sun.js'
 import posed from 'react-pose'
 import Typed from 'react-typed';
 import Stars from '../Stars/Stars'
-import { Link} from 'react-router-dom';
 import down from '../../assets/svg/arrowdown.svg'
+
 
 const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.6)"},
@@ -86,6 +86,8 @@ export default class Main extends React.Component{
         }
         
         let {light, light2, isVisible} = this.state;
+        var Scroll = require('react-scroll');
+        var scroll = Scroll.animateScroll;
         return(
             // <ScrollLocky>
             <div className="main" >   
@@ -120,7 +122,10 @@ export default class Main extends React.Component{
 		            <div class="bird bird--four"></div>
 	            </div>
                     <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
-                        <img className="arrow" src={down} alt="down arrow"/>
+                        <img onClick={()=>{scroll.scrollTo(window.innerHeight, {
+  duration: 1500,
+  delay: 100,
+  smooth: true})}} className="arrow" src={down} alt="down arrow"/>
                     </Buttons>
             </div>
             // </ScrollLocky>
