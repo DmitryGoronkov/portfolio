@@ -1,3 +1,10 @@
+@font-face {
+    font-family:'modern';
+    src: url('../../assets/fonts/Modern.otf') format('opentype');
+}
+*{
+    font-family: 'modern';
+}
 .background-top{
     width: 100vw;
     height: 80vh;
@@ -29,10 +36,10 @@
     background-color: rgb(5,5,3);
     width: 100vw;
     height: 100vh;
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 body{
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 // *{
 //     width: 100vw;
@@ -258,11 +265,11 @@ body{
 	}
 	
 	51% {
-		transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(100vw) scale(0.45);
 	}
 	
 	100% {
-		transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(0vh) translateX(100vw) scale(0.45);
 	}
 	
 }
