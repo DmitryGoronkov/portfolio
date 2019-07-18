@@ -19,8 +19,8 @@ const Overlay2 = posed.div({
 })
 
 const Buttons = posed.div({
-    hidden: {opacity: 0, transition: { duration: 5000}},
-    visible: {opacity: 1, transition: { duration: 5000} }
+    hidden: {opacity: 0, transition: { duration: 5000, }},
+    visible: {opacity: 1, transition: { duration: 5000, } }
 })
 export default class Main extends React.Component{
     state = {
@@ -56,10 +56,14 @@ export default class Main extends React.Component{
     //         return false;
     //     }
     // }
+    componentDidMount(){
+        
+    }
     componentDidUpdate(){
         if (this.state.imageStatus1 && this.state.imageStatus2){
             // window.addEventListener('touchstart', this.touchStart);
             // window.addEventListener('touchmove', this.preventTouch, {passive: false});
+            this.props.loadCheck();
             setInterval(()=> {
                 this.setState({ light2: true, isMoving: true})
             }, 100);
@@ -88,9 +92,11 @@ export default class Main extends React.Component{
         let {light, light2, isVisible} = this.state;
         var Scroll = require('react-scroll');
         var scroll = Scroll.animateScroll;
+       
+
         return(
             // <ScrollLocky>
-            <div className="main" >   
+            <div className="main" id="main">   
                 <Overlay2 className="overlay2" pose={light2? 'finish':'start'}></Overlay2>         
                 <Overlay className="overlay" pose={light? 'finish':'start'}></Overlay>
                 <img onLoad={this.handleImageLoaded1.bind(this)} style={topStyle} src={backTop}></img>
@@ -107,19 +113,19 @@ export default class Main extends React.Component{
                         smartBackspace={true}
                     /><br />
                 </div>
-                <div class="bird--wrap bird--wrap--one">
-		            <div class="bird bird--one"></div>
+                <div className="bird--wrap bird--wrap--one">
+		            <div className="bird bird--one"></div>
 	            </div>
-                <div class="bird--wrap bird--wrap--two">
-		            <div class="bird bird--two"></div>
-	            </div>
-	
-	            <div class="bird--wrap bird--wrap--three">
-		            <div class="bird bird--three"></div>
+                <div className="bird--wrap bird--wrap--two">
+		            <div className="bird bird--two"></div>
 	            </div>
 	
-	            <div class="bird--wrap bird--wrap--four">
-		            <div class="bird bird--four"></div>
+	            <div className="bird--wrap bird--wrap--three">
+		            <div className="bird bird--three"></div>
+	            </div>
+	
+	            <div className="bird--wrap bird--wrap--four">
+		            <div className="bird bird--four"></div>
 	            </div>
                     <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
                         <img onClick={()=>{scroll.scrollTo(window.innerHeight, {

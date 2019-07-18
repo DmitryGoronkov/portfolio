@@ -14,18 +14,81 @@ import curly from './assets/svg/curly-hair.svg'
 import wordpress from './assets/svg/wordpress.svg'
 import mockup from './assets/mockup.png'
 import Popup from "reactjs-popup";
-
+import {Link} from 'react-scroll'
+var Scroll = require('react-scroll');
+    var Events = Scroll.Events;
+    var scrollSpy  = Scroll.scrollSpy;
+const Modal = posed.div({
+  enter: {
+    x: 0,
+    opacity: 1,
+    delay: 300,
+    transition: {
+      x: { type: 'spring', stiffness: 1000, damping: 15 },
+      default: { duration: 300 }
+    }
+  },
+  exit: {
+    x: 500,
+    opacity: 0,
+    transition: { duration: 150 }
+  }
+});
+const Navbar = posed.div({
+  hidden: {opacity: 0, transition: { duration: 5000, }},
+  visible: {opacity: 1, transition: { duration: 5000, } }
+})
 function initializeReactGA() {
   ReactGA.initialize('UA-142705554-1');
   ReactGA.pageview('/homepage');
 }
 class App extends React.Component {
+  state = {
+    iconsMov: false,
+    scrollStarted: false,
+    navbar: false,
+    navbarColor: "white",
+    navbarBackgroundColor: "rgba(255,255,255,0.3)",
+    componentLoaded: false,
+  }
+  listenScrollEvent = e => {
+    if (window.scrollY > 100){
+        this.setState({
+          iconsMov: true
+        });
+    } else {
+      this.setState({
+        iconsMov: false
+      });
+    }
+    if (window.scrollY >= (window.innerHeight)) {
+      this.setState({navbarColor: 'black', navbarBackgroundColor: "white"})
+    } else {
+      this.setState({navbarColor: 'white', navbarBackgroundColor: "rgba(255,255,255,0.3)"})
+    }
+  }
+  loadCheck=()=>{
+    this.setState({componentLoaded:true})
+  }
   componentDidMount(){
     document.title = "Dmitry Goronkov Portfolio"
     initializeReactGA();
+    window.addEventListener('scroll', this.listenScrollEvent)
+    // Events.scrollEvent.register('begin', function(to, element) {
+      
+    // });
+    // scrollSpy.update();
   }
-  
+  componentDidUpdate (){
+    if (this.state.componentLoaded){
+      setInterval(()=>{
+        this.setState({navbar: true, componentLoaded: false})}, 3000)
+    
+    }
+  }
   render(){
+    
+    
   return (
     <div>
        {/* <BrowserRouter>
@@ -35,9 +98,38 @@ class App extends React.Component {
             <Route path="/projects" component={Projects} />
           </Switch>
         </BrowserRouter> */}
-        <Main></Main>
-        <div className="projects">
-          <div className="projects__icons">
+        <Navbar pose={this.state.navbar? 'visible':'hidden'} className="navbar" style={{backgroundColor: this.state.navbarBackgroundColor}}>
+                 <Link className="li" style={{color: this.state.navbarColor}}
+                        activeClass="active"
+                        to="main"
+                        spy={true}
+                        smooth={true}
+                        // offset={-70}
+                        duration= {500}
+                 ><span style={{fontWeight:"bold"}}>Dmitry Goronkov</span> Web Developer.</Link>
+                 <Link className="li" style={{color: this.state.navbarColor}} 
+                        activeClass="active"
+                        to="bio"
+                        spy={true}
+                        smooth={true}
+                        offset={-80}
+                        duration= {500}
+                 
+                 >Bio</Link>
+                <Link className="li" style={{color: this.state.navbarColor}}
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={-50}
+                        duration= {500}
+                
+                >Projects</Link>
+        </Navbar>
+        <Main loadCheck={this.loadCheck}></Main>
+        <div className="projects" >
+          <div id="bio">
+          <Modal pose={this.state.iconsMov? 'enter':'exit'}className="projects__icons" >
             <div className="projects__icons__technology">
               <img src={technology} alt="technology"/>
               <div className="label">I am proficient in most up-to-date technologies like <span>React</span>, <span>Redux</span>, <span>Express</span> and <span>cloud</span> databases</div>
@@ -54,7 +146,7 @@ class App extends React.Component {
               <img src={love} alt="done with love"/>
               <div className="label">Everything that I do is done with <span>love</span> and <span>attention</span></div>
             </div>
-          </div>
+          </Modal>
           <div className="projects__intro">
             <img className="projects__intro__logo" src={curly} alt="logo"/>
             <div className="projects__intro__greeting">
@@ -67,7 +159,8 @@ class App extends React.Component {
             </div> 
             <div className="projects__intro__details">Raised in the family of a programmer, since childhood I developed passion for digital technologies and beautiful designs. Later my commitment to continuous self-growth and passion to make a meaningful difference in people’s lives led me to work in multiple non-profit organizations and even seek a life of a monk. Now as I broadened my skillset with the newest web technologies I am excited for the new opportunities to make a positive difference in people lives through digital realm. </div>
           </div>
-          <div className="demo">
+          </div>
+          <div className="demo" id="projects">
           <div className="demo__title">My Projects</div>
           <div className="demo__beagiver">
             <img src={mockup} alt="beagivermockup"/>
