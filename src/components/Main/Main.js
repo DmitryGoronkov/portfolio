@@ -135,7 +135,14 @@ export default class Main extends React.Component{
                         smooth={true}
                         offset={-50}
                         duration= {500}
-                        ><img  className="arrow" src={down} alt="down arrow"/> </Link>
+                        ><svg class="arrow" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                          <ellipse class="background" ry="60" rx="60" cy="62.5" cx="62.5" stroke-width="2"/>
+                          <ellipse class="foreground" ry="60" rx="60" cy="62.5" cx="62.5" stroke-width="2"/>
+                          <line class="line line1" x1="32" y1="62" x2="62" y2="82" />
+                          <line class="line line2" x1="60" y1="92" x2="42" y2="62" />
+                        </g>
+                      </svg> </Link>
                     </Buttons>
             </div>
             // </ScrollLocky>

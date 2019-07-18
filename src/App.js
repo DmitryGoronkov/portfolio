@@ -161,7 +161,7 @@ class App extends React.Component {
           </div>
           </div>
           <div className="demo" id="projects">
-          <div className="demo__title">My Projects</div>
+          <div className="demo__title">Featured Project</div>
           <div className="demo__beagiver">
             <img src={mockup} alt="beagivermockup"/>
             <div className="demo__beagiver__description"> <span style={{fontWeight:"bold"}}>BeAGiver</span> is a mobile app with the goal to reduce food waste. Over <span style={{fontWeight:"bold"}}> $31 billion </span> dollars worth of food is wasted in Canada each year. This is enough to feed  <span style={{fontWeight:"bold"}}>every Canadian for five month. </span> The app connects charity organizations with grocery stores and restaurants and helps organize pick up of their extra food for further distribution to homeless and people in need.

@@ -277,7 +277,59 @@ body{
 	
 // }
 .arrow{
-    width: 3rem;
-    height: 3rem;
-    margin-top: 5rem;
+    height: 124px;
+    width: 124px;
+
+  .background {
+    fill: transparent;
+    stroke: #ffffff;
+    transition: all 200ms ease;
+  }
+  
+  .foreground {
+    fill: transparent;
+    stroke-dasharray: 377;
+    stroke-dashoffset: 377;
+    stroke: #ff5e00;
+    transform-origin: 50% 50%;
+    transform: rotate(-270deg);
+    transition: all 800ms ease;
+  }
+  
+  .line {
+    stroke-width: 2;
+    stroke: #ffffff;
+    transform-origin: 50% 50%;
+    transition: all 500ms ease;
+  }
+  
+  .line2 {
+    transform: rotate(-90deg);
+  }
+  
+  &:hover {
+    cursor: pointer;
+
+    .background {
+      stroke: transparent;
+    }
+    
+    .foreground {
+      stroke-dashoffset: 0;
+      transform: rotate(-90deg);
+    }
+    
+    .line {
+      stroke: #ff5e00;
+    }
+    
+//     .line {
+//       transform: rotate(180deg);
+//     }
+    
+//     .line2 {
+//       transform: rotate(0);
+//     }
+  }
+
 }
