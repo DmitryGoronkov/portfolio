@@ -200,9 +200,6 @@ a{
     }
   }
 }
-#bio {
-  height: 100vh;
-}
 .demo{
   height: 100vh;
   @media (min-width: 301px) and (max-width: 500px){
@@ -258,8 +255,13 @@ a{
         padding: 2rem;
         box-sizing: border-box;
       }
+      &--tech{
+        & span {
+          font-weight: bold;
+        }
+      }
       & span{
-        color: rgb(241, 142, 50);
+        // color: rgb(241, 142, 50);
       }
       & button{
         margin-top: 1rem;
