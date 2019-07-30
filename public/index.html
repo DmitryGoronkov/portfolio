@@ -65,13 +65,13 @@
       }
       if (!x || !y){
         x = xmouse;
-        y = ymouse;
+        y = ymouse+5;
       } else {
         dx = (xmouse - x) * 0.025;
         dy = (ymouse - y) * 0.025;
         if(Math.abs(dx) + Math.abs(dy) < 0.1){
           x= xmouse;
-          y = ymouse;
+          y = ymouse+5;
         } else {
           x += dx;
           y += dy;
