@@ -82,12 +82,12 @@ export default class Demo extends Component {
         <div className="demo__title">Volunteer network</div>
         <div className="demo__subtitle">React/Node.JS/Redux/Firebase</div>
         <div className="demo__subsubtitle">The project I am currently working now. It is a full stack event management platform featuring a user login system, integrated google maps, and live chat.</div>
-        <Popup trigger={<Box className="demo__button demo5__button5"> Demo </Box>} 
+        {/* <Popup trigger={<Box className="demo__button demo5__button5"> Demo </Box>} 
                       modal
                       closeOnDocumentClick
                       position="center center">
                       <iframe title="beagiver" src="https://www.youtube.com/embed/IeIJ3_X8GBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" ></iframe>
-        </Popup> 
+        </Popup>  */}
       </div>
     </>
     )
