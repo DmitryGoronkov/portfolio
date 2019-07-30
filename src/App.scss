@@ -21,8 +21,8 @@ a{
   z-index: 200;
   margin: 0;
   text-align: center;
-  & > .active{
-    border-bottom: 1px solid rgb(231, 147, 79);
+  & > .active:not(:first-child){
+    color: rgb(231, 147, 79) !important;
   }
 }
 .li {

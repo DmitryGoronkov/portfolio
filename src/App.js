@@ -106,25 +106,27 @@ class App extends React.Component {
                         spy={true}
                         smooth={true}
                         offset={-80}
-                        duration= {500}>Bio</Link>
+                        duration= {500}>Skills</Link>
                   <Link className="li" style={{color: this.state.navbarColor}}
                         activeClass="active"
                         to="projects"
                         spy={true}
                         smooth={true}
-                        offset={-50}
+                        offset={0}
                         duration= {500}>Projects</Link>
         </Navbar>
         <Main loadCheck={this.loadCheck}></Main>
         <div className="bio" >
-        <Projects></Projects>
+          <div id="projects">
+          <Projects></Projects>
           <Demo></Demo>
+          </div>
           <div id="bio">
           <div className="bio__title">What can I bring to the team:</div>
           <Modal pose={this.state.iconsMov? 'enter':'exit'}className="bio__icons" >
             <div className="bio__icons__item">
               <img src={technology} alt="technology"/>
-              <div className="label">I am proficient in most up-to-date technologies like <span>React</span>, <span>Redux</span>, <span>Express</span> and <span>cloud</span> databases</div>
+              <div className="label">My tech stack is <br/><span>HTML5</span>, <span>CSS3</span>, <span>JavaScript</span>, <br/> <span>React JS</span>, <span>Angular</span>, <span>Vue </span>, <br/><span>Redux</span>, <span>Node JS</span>, <span>Express JS</span>,<br/> <span>NoSQL</span>, <span>Mongo DB</span> and <span>Firebase</span></div>
             </div>
             <div className="bio__icons__item">
               <img src={colaboration} alt="colaboration"/>
