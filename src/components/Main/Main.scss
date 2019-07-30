@@ -1,9 +1,6 @@
-@font-face {
-    font-family:'modern';
-    src: url('../../assets/fonts/Modern.otf') format('opentype');
-}
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 *{
-    font-family: 'modern';
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .background-top{
@@ -49,14 +46,14 @@ body{
 // }
 .heading{
     color: white;
-    font-size: 3.5rem;
+    font-size: 3rem;
     @media (min-width: 1920px){
         width: 450px;
         font-size: 5rem;
     }
-    @media (min-width: 320px) and (max-width: 600px){
+    @media (min-width: 320px) and (max-width: 1000px){
         font-size: 2.5rem;
-        width: 90%
+        width: 80%
     }
     width: 450px;
     word-wrap: break-word;

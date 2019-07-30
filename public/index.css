@@ -1,0 +1,35 @@
+.birdIndex {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+  background-size: auto 100%;
+  width: 44px;
+  height: 68px;
+  will-change: background-position;
+  position: absolute;
+  z-index: 1000;
+  -webkit-animation-name: fly;
+          animation-name: fly;
+  -webkit-animation-timing-function: steps(10);
+          animation-timing-function: steps(10);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.birdIndex--one {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes fly {
+  100% {
+    background-position: -500px 0;
+  }
+}
+
+@keyframes fly {
+  100% {
+    background-position: -500px 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

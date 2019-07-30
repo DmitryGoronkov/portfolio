@@ -1,0 +1,45 @@
+// #ball{
+//     width: 60px;
+//     height: 60px;
+//     background: none;
+//     border: 1px solid grey;
+//     border-radius: 50%;
+//     position: absolute;
+//     /* left: 50%;
+//     top: 50%;
+//     margin: -10px 0 0 -10px;
+//     pointer-events: none; */
+//     z-index: 1000;
+//   }
+
+  .birdIndex {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+	background-size: auto 100%;
+	width: 44px;
+	height: 68px;
+	will-change: background-position;
+    position: absolute;
+    z-index: 1000;
+    // @media (max-width: 500px){
+    //     top: 40vh;
+    // }
+	animation-name: fly;
+	
+	animation-timing-function: steps(10);
+    animation-iteration-count: infinite;
+    &--one {
+		animation-duration: 0.5s;
+		animation-delay: -0.5s;		
+	}
+    
+}
+
+
+
+@keyframes fly {
+	
+	100% {
+		background-position: -500px 0;
+	}
+	
+}

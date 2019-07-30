@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <!--
@@ -21,8 +22,9 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body onload="followMouse()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="bird" class="birdIndex birdIndex--one"></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -34,5 +36,51 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script type="text/javascript">
+   var $ = document.querySelector.bind(document);
+   var $on = document.addEventListener.bind(document);
+
+   var xmouse, ymouse;
+   $on('mousemove', function (e) {
+    //  xmouse = e.clientX || e.pageX;
+    //  ymouse = e.clientY || e.pageY;
+     xmouse = e.pageX;
+     ymouse = e.pageY;
+   });
+   var bird = $('#bird');
+   var x = void 0,
+        y = void 0,
+        dx = void 0,
+        dy = void 0,
+        tx = 0,
+        ty = 0,
+        key = -1;
+    
+    var followMouse = function followMouse() {
+      key = requestAnimationFrame(followMouse);
+      if (xmouse < x){
+        bird.style.transform = "scaleX(-1)";
+      } else {
+        bird.style.transform = "scaleX(1)";
+      }
+      if (!x || !y){
+        x = xmouse;
+        y = ymouse;
+      } else {
+        dx = (xmouse - x) * 0.025;
+        dy = (ymouse - y) * 0.025;
+        if(Math.abs(dx) + Math.abs(dy) < 0.1){
+          x= xmouse;
+          y = ymouse;
+        } else {
+          x += dx;
+          y += dy;
+        }
+      }
+      bird.style.left = x + 'px';
+      bird.style.top = y + 'px';
+    }
+  
+  </script>
   </body>
 </html>

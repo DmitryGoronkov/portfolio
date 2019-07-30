@@ -1,0 +1,17 @@
+.circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 92%;
+  height: 92%;
+  border-radius: 50%;
+  background-color: rgba(255, 183, 76, 0.1);
+}
+/*# sourceMappingURL=Sun.css.map */

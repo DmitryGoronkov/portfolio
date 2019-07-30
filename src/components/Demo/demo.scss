@@ -1,0 +1,119 @@
+.demo1{
+    background-color: rgb(211, 172, 0);
+    &__image1{
+        width: 800px;
+        @media (max-width: 1000px){
+            width: 90%;
+        }
+    }
+    &__button1{
+        background-color: #FFD100;
+        color: black;
+    }
+}
+.demo2{
+    background-color:#fdbe71;
+    &__image2{
+        width: 800px;
+        @media (max-width: 1000px){
+            width: 90%;
+        }
+    }
+    &__button2{
+        background-color: #ff943c;
+        color: white;
+    }
+}
+.demo3{
+    background-color: rgb(102, 146, 213);
+    &__button3{
+        background-color: rgb(76, 207, 127);
+        color: white;
+    }
+}
+.demo4{
+    background-color:#679895;
+    &__button4{
+        background-color: #2bc9a1;
+        color: white;
+    }
+}
+.demo5{
+    background-color: #f55e5e;
+    &__button5{
+        background-color: #c53434;
+        color: white;
+    }
+    &__image5{
+            width: 900px;
+            @media (max-width: 1000px){
+                width: 90%;
+            }
+        
+    }
+}
+.demo{
+    box-sizing: border-box;
+    padding: 4rem;
+    @media (max-width: 1000px){
+        padding: 4rem 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    &__image{
+        
+        border-radius: 2rem;
+       
+    }
+    &__title{
+        margin-top: 3rem;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        @media (max-width: 1000px){
+            width: 90%;
+        }
+
+    }
+    &__subtitle{
+        text-align: center;
+        @media (max-width: 1000px){
+            width: 90%;
+        }
+    }
+    &__subsubtitle{
+        margin-top: 2rem;
+        width: 60%;
+        
+        text-align: center;
+        @media (max-width:800px){
+            width: 90%;
+        }
+    }
+    &__button{
+        margin-top: 2rem;
+        width: 200px;
+        height: 40px;
+        outline: none;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 40px;
+    }
+
+}
+.popup-content{
+    width: 80vw !important;
+}
+iframe{
+    padding: 0;
+    background-color: white;
+    width: 80vw;
+    height: 80vh;
+}
+  
