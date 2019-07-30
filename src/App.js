@@ -100,6 +100,13 @@ class App extends React.Component {
                         // offset={-70}
                         duration= {500}
                  ><span style={{fontWeight:"bold"}}>Dmitry Goronkov</span> Web Developer.</Link>
+                 <Link className="li" style={{color: this.state.navbarColor}}
+                        activeClass="active"
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration= {500}>Projects</Link>
                  <Link className="li" style={{color: this.state.navbarColor}} 
                         activeClass="active"
                         to="bio"
@@ -107,13 +114,7 @@ class App extends React.Component {
                         smooth={true}
                         offset={-80}
                         duration= {500}>Skills</Link>
-                  <Link className="li" style={{color: this.state.navbarColor}}
-                        activeClass="active"
-                        to="projects"
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration= {500}>Projects</Link>
+                  
         </Navbar>
         <Main loadCheck={this.loadCheck}></Main>
         <div className="bio" >
