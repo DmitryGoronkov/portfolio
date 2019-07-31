@@ -30,7 +30,7 @@ const Box = posed.div({
 
 export default function Projects() {
     return (
-        <div className="Projectsmain">
+        <div id="proj" className="Projectsmain">
             <img className="face" src={curly} alt="logo"/>
             <div className="title">Hi, I'm Dmitry Goronkov</div>
             <div className="subtitle">Full-Stack web developer dedicated to delivering products with <span>integrity</span></div>

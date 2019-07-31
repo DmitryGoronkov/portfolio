@@ -130,7 +130,7 @@ export default class Main extends React.Component{
                     <Buttons className="button--wrap" pose={isVisible? 'visible':'hidden'}>
                         <Link
                         activeClass="active"
-                        to="bio"
+                        to="proj"
                         spy={true}
                         smooth={true}
                         offset={-50}
