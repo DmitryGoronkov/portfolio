@@ -11,16 +11,16 @@ import {Link} from 'react-scroll'
 
 const Overlay = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.6)"},
-    finish: {backgroundColor: "rgba(255, 150, 124, 0.6)",transition: { duration: 10000 }},
+    finish: {backgroundColor: "rgba(255, 150, 124, 0.6)",transition: { duration: 4000 }},
 })
 const Overlay2 = posed.div({
     start: {backgroundColor: "rgba(0,0,0,0.99)"},
-    finish: {backgroundColor: "rgba(0,0,0,0.01)",transition: { duration: 5000 }},
+    finish: {backgroundColor: "rgba(0,0,0,0.01)",transition: { duration: 2000 }},
 })
 
 const Buttons = posed.div({
-    hidden: {opacity: 0, transition: { duration: 5000, }},
-    visible: {opacity: 1, transition: { duration: 5000, } }
+    hidden: {opacity: 0, transition: { duration: 2000, }},
+    visible: {opacity: 1, transition: { duration: 2000, } }
 })
 export default class Main extends React.Component{
     state = {
